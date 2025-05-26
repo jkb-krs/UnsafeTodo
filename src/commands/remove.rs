@@ -8,15 +8,15 @@ impl Command for RemoveCommand {
         if let Some(index_str) = args.get(0) {
             if let Ok(index) = index_str.parse::<usize>() {
                 if let Some(removed) = todo_list.remove(index - 1) {
-                    println!("Aufgabe entfernt: {}", removed);
+                    println!("removed TODO: {}", removed);
                 } else {
-                    println!("Fehler: Ungültiger Index.");
+                    println!("Error: Wrong Index.");
                 }
             } else {
-                println!("Fehler: '{}' ist keine gültige Zahl.", index_str);
+                println!("Error: '{}' no valid number", index_str);
             }
         } else {
-            println!("Fehler: Kein Index angegeben.");
+            println!("Error: No index specified.");
         }
     }
 }

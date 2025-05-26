@@ -7,9 +7,9 @@ impl Command for AddCommand {
     fn execute(&self, args: &[String], todo_list: &mut TodoList) {
         if let Some(task) = args.get(0) {
             todo_list.add(task.to_string());
-            println!("Aufgabe hinzugefügt: {}", task);
+            println!("Added task: {}", task);
         } else {
-            println!("Fehler: keine Aufgabe angegeben.");
+            println!("Error: no task specified.");
         }
     }
 }
